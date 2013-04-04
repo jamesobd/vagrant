@@ -9,7 +9,7 @@ This readme details how to get yourself set up to take advantage of these tools.
 Setup
 -------
 1. Install [Cygwin](http://cygwin.com)
-  * During setup install: <code>ruby</code> and <code>openssh</code>
+  * During setup install: <code>ruby</code>, <code>git</code>, and <code>openssh</code>
 2. Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 3. Install [Vagrant](http://downloads.vagrantup.com)
 
