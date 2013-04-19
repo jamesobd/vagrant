@@ -15,6 +15,12 @@ Setup
      * During setup install: <code>ruby</code>, <code>git</code>, and <code>openssh</code>
   * [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
+Boxes
+-------
+Boxes are base virtual machines that vagrant will build on.  They can [downloaded here](http://www.vagrantbox.es/).  Some common ones are these:
+* precise32 http://files.vagrantup.com/precise32.box
+* precise64 http://files.vagrantup.com/precise64.box
+
 Pick a Stack
 -------
 1. Basic LAMP Stack
