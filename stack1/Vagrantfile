@@ -1,0 +1,31 @@
+# Base vagrant box to start with
+#
+# Single box with LAMP stack via Puppet.
+#
+box      = 'precise64'
+url      = 'http://files.vagrantup.com/precise64.box'
+hostname = 'basebox'
+domain   = 'dev1.org'
+ipaddress       = '192.168.0.47' #change this to the next available IP address
+ram      = '386'
+
+Vagrant.configure("2") do |config|
+  config.vm.box = box
+  config.vm.box_url = url
+  config.vm.hostname = hostname + '.' + domain
+  config.vm.network :private_network, ip: ipaddress
+
+  config.vm.provider :virtualbox do |vb|
+	  vb.customize [
+		'modifyvm', :id,
+		'--name', hostname,
+		'--memory', ram
+	  ]
+  end
+
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = 'puppet/manifests'
+    puppet.manifest_file = 'site.pp'
+    puppet.module_path = 'puppet/modules'
+  end
+end

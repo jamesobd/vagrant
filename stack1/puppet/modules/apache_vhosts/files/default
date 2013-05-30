@@ -1,0 +1,23 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+
+    DocumentRoot /vagrant
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+        <Directory /vagrant>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/default-error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel debug
+
+    CustomLog ${APACHE_LOG_DIR}/default-access.log combined
+</VirtualHost>

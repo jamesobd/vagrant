@@ -11,7 +11,8 @@ Setup
 1. Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 2. Install [Vagrant](http://downloads.vagrantup.com)
 3. (Windows people) You may want to ssh into the VM's.  Here are a couple options.
-  * [Cygwin](http://cygwin.com) (Recommended)
+  * [git-bash] (http://msysgit.github.io/) (Recommended)
+  * [Cygwin](http://cygwin.com)
      * During setup install: <code>ruby</code>, <code>git</code>, and <code>openssh</code>
   * [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
